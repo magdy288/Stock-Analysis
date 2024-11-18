@@ -12,7 +12,7 @@ symbol = st.text_input('Add a Stock Symbol', 'TSLA')
 
 df = yf.download(symbol, interval='1h', period='1mo')
 
-analysis_result = analysis_results(df,symbol)
+analysis_result = analysis_results(symbol)
 
 
 ##########################################################################################################
