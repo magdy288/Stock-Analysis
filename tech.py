@@ -5,7 +5,7 @@ import streamlit as st
 
 # download data
 
-def indicators(df, symbol):
+def indicators(symbol):
     df = yf.download(symbol, interval='1h', period='1mo')
     
         # basic moving-averages
@@ -88,8 +88,8 @@ def fibbo(df):
     return fibonacci_levels
 
  ### Prepare the result
-def analysis_results(df,symbol):
-    df = indicators(df, symbol)
+def analysis_results(symbol):
+    df = indicators(symbol)
     
     latest = df.iloc[-1]
     analysis_result = {
